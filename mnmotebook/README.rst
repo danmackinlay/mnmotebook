@@ -1,7 +1,7 @@
 mnmotebook
 ###########
 
-This is the `mnmotebook theme <http://mnmlist.com/theme>`_ adapted for Pelican.
+This is the mnmotebook theme, adapted from `mnmlist theme <http://mnmlist.com/theme>`_ adapted for Pelican.
 
 
 Settings
@@ -21,8 +21,9 @@ Compass
 
 The ``main.css`` file is generated from the ``compass/src/main.scss`` sass file, using http://compass-style.org/.
 
-Screenshot
-----------
 
-.. image:: screenshot.png
-   :alt: Screenshot of the theme
+Plugins
+~~~~~~~~~~~~~~
+
+this theme sorts by "modified" date; if not all your articles have "modifed" dates, you might want to use the "always modified" plugin.
+

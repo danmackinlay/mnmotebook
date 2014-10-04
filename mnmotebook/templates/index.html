@@ -2,8 +2,7 @@
 {% block content_title %}{% endblock %}
 {% block content %}        
 {% if articles %}
-    {% for article in articles %}        
-
+    {% for article in articles|sort(reverse=True,attribute='modified') %}
         {# First item #}
         {% if loop.first %}
             <header>
