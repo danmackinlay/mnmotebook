@@ -4,7 +4,13 @@
 <header>
     <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> :
         <a href="{{ SITEURL }}/{{ article.url }}" id="page-title">{{ article.title }}</a></h1>
-    {% if not HIDE_DATE %}<time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>{% endif %}
+    {% if not HIDE_DATE %}
+      {% if article.modified is defined %}
+          <time datetime="{{ article.modified.isoformat()}}"> {{ article.locale_modified }}</time>
+      {% else %}
+          <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+      {% endif %}
+    {% endif %}
 </header>
 <article>
     {{ article.content }}
