@@ -74,7 +74,14 @@ a {
     color: #303030;
     text-decoration: none;
     &:hover { color: #999; }
+    /* underlines look dumb on figures */
+    &.image-reference {
+        text-decoration: none;
+        border-bottom: none;
+    }
+    
 }
+
 
 ul, ol {
     padding: .5em 0em 1em 3.2em;
