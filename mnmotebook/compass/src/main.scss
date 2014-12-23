@@ -60,8 +60,8 @@ blockquote {
 }
 
 p {
-    line-height: 30px;
-    margin:30px auto;
+    /* line-height: 30px; */
+    margin: 0.5em auto;
     text-indent: 0px;
     &.caption {
         font-size: 80%;
@@ -88,6 +88,9 @@ ul, ol {
     li {
         line-height: 30px;
         padding: 6px 0 0 0;
+        p {
+            margin: 0.35em auto;
+        }
     }
 }
 
