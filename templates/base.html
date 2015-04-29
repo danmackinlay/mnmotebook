@@ -64,6 +64,11 @@
                 {% if FEED_ALL_RSS %}
                   <li>:: <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">RSS feed</a></li>
                 {% endif %}
+                {% if SOCIAL %}
+                  {% for name, link in SOCIAL %}
+                    <li>:: <a href="{{ link }}">{{ name }}</a></li>
+                  {% endfor %}
+                {% endif %}
                 </ul>
             </nav>
                 <p id="theme-credit">Theme <a href="https://github.com/howthebodyworks/mnmotebook">mnmotebook</a> is based on <a href="http://mathieu.agopian.info/mnmlist/theme.html">thème mnmlist</a></p>
