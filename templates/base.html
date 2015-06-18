@@ -42,7 +42,12 @@
 </head>
 
 <body>
-{% include 'github.html' %}
+        {% include 'github.html' %}
+        <header>
+        {% block header %}
+        {% endblock %}
+        </header>
+
         {% block content %}
         {% endblock %}
 

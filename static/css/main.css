@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
     Theme Name: mnmotebook
     Theme URI: http://mathieu.agopian.info/mnmlist/theme.html
@@ -103,109 +104,132 @@ header time {
   font-size: 70%;
   font-style: italic;
 }
+/* line 79, ../../compass/src/main.scss */
+header ul.tags {
+  /* font-size: 0.8em; */
+  font-variant: small-caps;
+  display: inline;
+}
+/* line 83, ../../compass/src/main.scss */
+header ul.tags li {
+  display: inline;
+  list-style-type: none;
+}
+/* line 86, ../../compass/src/main.scss */
+header ul.tags li:after {
+  content: '—';
+}
+/* line 89, ../../compass/src/main.scss */
+header ul.tags li:last-child:after {
+  content: none;
+}
+/* line 92, ../../compass/src/main.scss */
+header .tag {
+  font-variant: small-caps;
+}
 
-/* line 81, ../../compass/src/main.scss */
+/* line 97, ../../compass/src/main.scss */
 article {
   /* don't indent first list
   I'm sure I could do this smarter with margins, but no longer care enough
   */
 }
-/* line 82, ../../compass/src/main.scss */
+/* line 98, ../../compass/src/main.scss */
 article img {
   border: none;
 }
-/* line 86, ../../compass/src/main.scss */
+/* line 102, ../../compass/src/main.scss */
 article blockquote {
   border-left: 1px solid #A5ABAB;
   margin: 0px;
   padding: 0 12px 0 12px;
 }
-/* line 92, ../../compass/src/main.scss */
+/* line 108, ../../compass/src/main.scss */
 article p {
   /* line-height: 30px; */
   margin: 0.5em auto;
   text-indent: 0px;
 }
-/* line 96, ../../compass/src/main.scss */
+/* line 112, ../../compass/src/main.scss */
 article p.caption {
   font-size: 80%;
   margin-top: 0;
   text-align: center;
 }
-/* line 103, ../../compass/src/main.scss */
+/* line 119, ../../compass/src/main.scss */
 article ul, article ol {
   padding: .5em 0em 0.3em 3.2em;
 }
-/* line 105, ../../compass/src/main.scss */
+/* line 121, ../../compass/src/main.scss */
 article ul li, article ol li {
   line-height: 30px;
   padding: 6px 0 0 0;
 }
-/* line 108, ../../compass/src/main.scss */
+/* line 124, ../../compass/src/main.scss */
 article ul li p, article ol li p {
   margin: 0.35em auto;
 }
-/* line 116, ../../compass/src/main.scss */
+/* line 132, ../../compass/src/main.scss */
 article .section > ul, article .section > ol {
   padding-left: 1em;
 }
-/* line 119, ../../compass/src/main.scss */
+/* line 135, ../../compass/src/main.scss */
 article dt {
   font-variant: small-caps;
 }
-/* line 121, ../../compass/src/main.scss */
+/* line 137, ../../compass/src/main.scss */
 article dt:after {
   content: ':';
 }
-/* line 124, ../../compass/src/main.scss */
+/* line 140, ../../compass/src/main.scss */
 article strong {
   color: #555555;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
 }
-/* line 130, ../../compass/src/main.scss */
+/* line 146, ../../compass/src/main.scss */
 article tt, article pre {
   background-color: #fafafa;
   font-family: Inconsolata, Monaco, monospace;
   line-height: 1.2em;
   font-size: 0.8em;
 }
-/* line 137, ../../compass/src/main.scss */
+/* line 153, ../../compass/src/main.scss */
 article pre {
   overflow: auto;
   padding: 10px;
 }
 
-/* line 144, ../../compass/src/main.scss */
+/* line 160, ../../compass/src/main.scss */
 #article-list {
   margin-top: 2.2em;
 }
-/* line 146, ../../compass/src/main.scss */
+/* line 162, ../../compass/src/main.scss */
 #article-list ol li {
   line-height: 1.2em;
   list-style-type: none;
   padding-bottom: 10px;
 }
 
-/* line 153, ../../compass/src/main.scss */
+/* line 169, ../../compass/src/main.scss */
 .note {
   background: #efefef;
   margin: 1em 0;
 }
-/* line 156, ../../compass/src/main.scss */
+/* line 172, ../../compass/src/main.scss */
 .note p {
   display: inline;
 }
-/* line 158, ../../compass/src/main.scss */
+/* line 174, ../../compass/src/main.scss */
 .note p.first {
   font-weight: bold;
 }
-/* line 160, ../../compass/src/main.scss */
+/* line 176, ../../compass/src/main.scss */
 .note p.first:after {
   content: ' : ';
 }
 
-/* line 167, ../../compass/src/main.scss */
+/* line 183, ../../compass/src/main.scss */
 footer {
   background: #fff;
   color: #666;
@@ -214,16 +238,16 @@ footer {
   letter-spacing: 4px;
   margin-left: 20px;
 }
-/* line 174, ../../compass/src/main.scss */
+/* line 190, ../../compass/src/main.scss */
 footer a {
   border-bottom: none;
   color: #c0c0c0;
 }
-/* line 178, ../../compass/src/main.scss */
+/* line 194, ../../compass/src/main.scss */
 footer li {
   display: inline;
 }
-/* line 181, ../../compass/src/main.scss */
+/* line 197, ../../compass/src/main.scss */
 footer p {
   text-align: right;
 }

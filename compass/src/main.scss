@@ -76,6 +76,22 @@ header {
         font-size: 70%;
         font-style: italic;
     }
+    ul.tags {
+        /* font-size: 0.8em; */
+        font-variant: small-caps;
+        display: inline;
+        li {
+            display:inline;
+            list-style-type: none;
+            &:after { content: '—'; };
+        }
+        li:last-child {
+            &:after { content: none; };
+        };
+    }
+    .tag {
+        font-variant: small-caps;
+    }
 }
 
 article {

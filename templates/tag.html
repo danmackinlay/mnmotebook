@@ -1,2 +1,7 @@
 {% extends "index.html" %}
 {% block title %}{{ SITENAME }} - {{ tag }}{% endblock %}
+{% block header %}
+    <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> :
+        <a href="{{ SITEURL }}/{{ tag.url }}" id="page-title" class="tag">{{ tag }}</a>
+    </h1>
+{% endblock header %}

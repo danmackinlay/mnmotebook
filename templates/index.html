@@ -1,17 +1,17 @@
 {% extends "base.html" %}
-{% block content_title %}{% endblock %}
-{% block content %}
+{% block header %}
 {% if page %}
-            <header>
-                <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> : <a href="{{ SITEURL }}/{{ page.url }}" id="page-title">{{ page.title }}</a></h1>
-            </header>
+    <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> :
+        <a href="{{ SITEURL }}/{{ page.url }}" id="page-title">{{ page.title|striptags }}</a></h1>
+{% endif  %}
+{% endblock header %}
+
+{% block content %}
+
+{% if page %}
             <article>
                 {{ page.content }}{% include 'comments.html' %}
             </article>
-{% else %}
-            <header>
-                <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
-            </header>            
 {% endif %}
 
 {% if articles %}
@@ -20,7 +20,7 @@
           {% for article in articles|sort(reverse=True,attribute='modified') %}
             <li>
               <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
-              {% if not HIDE_DATE %}
+              {% if not HIDE_DATE %} — 
                 {% if article.modified is defined %}
                     <time datetime="{{ article.modified.isoformat()}}"> {{ article.locale_modified }}</time>
                 {% else %}

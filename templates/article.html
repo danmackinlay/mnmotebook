@@ -1,9 +1,13 @@
 {% extends "base.html" %}
-{% block title %}{{ super() }} : {{ article.title }}{% endblock %}
-{% block content %}        
-<header>
-    <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> :
-        <a href="{{ SITEURL }}/{{ article.url }}" id="page-title">{{ article.title }}</a></h1>
+{% block title %}{{ super() }} : {{ article.title|striptags }}{% endblock %}
+{% block head %}
+    {{ super() }}
+    {% for tag in article.tags %}
+      <meta name="tags" content="{{tag}}" />
+    {% endfor %}
+{% endblock %}
+{% block header %}
+    <h1><a href="{{ SITEURL }}/{{ article.url }}" id="page-title">{{ article.title }}</a></h1>
     {% if not HIDE_DATE %}
       {% if article.modified is defined %}
           <time datetime="{{ article.modified.isoformat()}}"> {{ article.locale_modified }}</time>
@@ -11,7 +15,16 @@
           <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
       {% endif %}
     {% endif %}
-</header>
+    {% if article.tags %}
+    <ul class="tags">
+        {% for tag in article.tags|sort %}
+          <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+        {% endfor %}
+    </ol>
+    {% endif %}
+{% endblock header %}
+
+{% block content %}
 <article>
     {{ article.content }}
 </article>
