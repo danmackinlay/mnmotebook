@@ -1,8 +1,13 @@
 mnmotebook
 ###########
 
-This is the mnmotebook theme, adapted from `mnmlist theme <http://mnmlist.com/theme>`_  for Pelican, adapted in turn
-from the mnmlist wordpress theme.
+This is the mnmotebook theme, (heavily)
+adapted from `Mathieu Agopian's mnmlist  for Pelican <http://mathieu.agopian.info/mnmlist/theme.html>`_,
+adapted in turn from the `mnmlist theme for wordpress <http://mnmlist.com/theme>`_,
+each of which has been released into the public domain.
+
+The adapted mnmotebook theme is copyright 2015 Daniel MacKinlay,
+and released under the MIT licence.
 
 Settings
 ~~~~~~~~
