@@ -80,10 +80,11 @@ header {
         /* font-size: 0.8em; */
         font-variant: small-caps;
         display: inline;
+        line-height: 1em;
         li {
             display:inline;
             list-style-type: none;
-            &:after { content: '—'; };
+            &:after { content: ' — '; };
         }
         li:last-child {
             &:after { content: none; };
