@@ -7,7 +7,7 @@ adapted in turn from the `mnmlist theme for wordpress <http://mnmlist.com/theme>
 each of which has been released into the public domain.
 
 The adapted mnmotebook theme is copyright 2015 Daniel MacKinlay,
-and released under the MIT licence.
+and released under the GPL licence.
 
 Settings
 ~~~~~~~~
