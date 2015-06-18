@@ -1,8 +1,8 @@
 mnmotebook
 ###########
 
-This is the mnmotebook theme, adapted from `mnmlist theme <http://mnmlist.com/theme>`_ adapted for Pelican from the mnmlist wordpress theme.
-
+This is the mnmotebook theme, adapted from `mnmlist theme <http://mnmlist.com/theme>`_  for Pelican, adapted in turn
+from the mnmlist wordpress theme.
 
 Settings
 ~~~~~~~~
