@@ -19,16 +19,25 @@ body {
     margin: 60px 14px 0 64px;
 }
 
-@mixin heading ($font-size, $color: #666) {
+@mixin heading ($font-size, $color: #333) {
     color: $color;
-    font-family: Helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-size: $font-size;
+    margin-top: 1.8em;
+    margin-left: -1em;
+    font-weight: normal;
 }
 
 h1 {
-    @include heading(1.5em, #333);
-    font-weight: normal;
+    @include heading(1.5em, #222);
     margin-bottom: 0;
+    font-variant: normal;
+    a#site-title {
+        font-style: oblique;
+    }
+    a#page-title {
+	    font-weight: normal;
+    }
 }
 
 h2 {
@@ -95,6 +104,11 @@ ul, ol {
     }
 }
 
+dt {
+    font-variant: small-caps;
+    &:after { content: ':'; };
+}
+
 strong {
     color: #555555;
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -105,10 +119,10 @@ tt, pre {
     background-color: #fafafa;
     font-family: Inconsolata, Monaco, monospace;
     line-height: 1.2em;
+    font-size: 0.8em;
 }
 
 pre {
-    font-size: 0.8em;
     overflow: auto;
     padding: 10px;
 }

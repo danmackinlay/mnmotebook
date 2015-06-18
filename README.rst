@@ -19,8 +19,13 @@ If ``HIDE_DATE`` is set to ``True``, dates won't be displayed under the blog pos
 Compass
 ~~~~~~~
 
-The ``main.css`` file is generated from the ``compass/src/main.scss`` sass file, using http://compass-style.org/.
+The ``main.css`` file is generated from the ``compass/src/main.scss`` sass file, using http://compass-style.org/
 
+From the command line::
+
+    compass compile
+
+or maybe try `scout <https://mhs.github.io/scout-app/>`_.
 
 Plugins
 ~~~~~~~~~~~~~~
