@@ -3,6 +3,8 @@
 {% if page %}
     <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> :
         <a href="{{ SITEURL }}/{{ page.url }}" id="page-title">{{ page.title|striptags }}</a></h1>
+{% else  %}
+    <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
 {% endif  %}
 {% endblock header %}
 
@@ -15,8 +17,8 @@
 {% endif %}
 
 {% if articles %}
-      <section id="article-list">
-          <ol>
+      <nav id="article-list">
+          <ul>
           {% for article in articles|sort(reverse=True,attribute='modified') %}
             <li>
               <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
@@ -30,7 +32,7 @@
             </li>
           {% endfor %}
           </ol>
-      </section><!-- #article-list -->
+      </nav><!-- #article-list -->
 {% else %}
     No posts found.
 {% endif %}

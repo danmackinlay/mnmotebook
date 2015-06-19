@@ -1,9 +1,30 @@
-{% extends "base.html" %}
-{% block content %}
-<ul>
-{% for tag, articles in tags %}
-    <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
-{% endfor %}
-</ul>
-{% endblock %}
+{% extends "index.html" %}
+{% block header %}
+{% if page %}
+    <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> :
+        <a href="{{ SITEURL }}/{{ page.url }}" id="page-title">{{ page.title|striptags }}</a></h1>
+{% else  %}
+    <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> : <span id="page-title">Tags</span></h1>
+{% endif  %}
+{% endblock header %}
 
+{% block content %}
+{% if page %}
+            <article>
+                {{ page.content }}{% include 'comments.html' %}
+            </article>
+{% endif %}
+{% if tags %}
+
+    <nav id="tag-list">
+
+        <ul class="tags">
+        {% for tag, articles in tags|sort %}
+            <li class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+        {% endfor %}
+        </ul>
+    </nav>
+{% else %}
+    No Tags found.
+{% endif %}
+{% endblock %}

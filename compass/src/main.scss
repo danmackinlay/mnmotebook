@@ -14,7 +14,7 @@ body {
     background: #fff;
     color: #333;
     font: 20px "Garamond EB", Garamond, Baskerville, bodyfont, serif;
-    line-height: 30px;
+    line-height: 1.5;
     max-width: 30em;
     margin: 60px 14px 0 64px;
 }
@@ -67,6 +67,9 @@ h4 {
 
 .tag, .tags {
     font-variant: small-caps;
+    text-transform: capitalize;
+    font-family: "Garamond EB", Garamond, Baskerville, bodyfont, serif;
+    padding: 0;
 }
 
 time {
@@ -76,23 +79,10 @@ time {
 }
 
 header {
-    padding-bottom: 20px;
+    padding-bottom: 0;
     a {
         border-bottom: none;
         &#page-title { font-weight: bold; }
-    }
-    ul.tags {
-        /* font-size: 0.8em; */
-        display: inline;
-        line-height: 1em;
-        li {
-            display:inline;
-            list-style-type: none;
-            &:after { content: ' — '; };
-        }
-        li:last-child {
-            &:after { content: none; };
-        };
     }
 }
 
@@ -119,20 +109,19 @@ article {
     }
 
     ul, ol {
-        padding: .5em 0em 0.3em 3.2em;
+        padding: 0 0 0.3em 1em;
+        margin-top: 0;
+        /* indent inner list more */
+        ul, ol {
+            padding: 0 0 0 2.2em;
+        }
         li {
             line-height: 30px;
-            padding: 6px 0 0 0;
+            margin: 0.35em 0;
             p {
                 margin: 0.35em auto;
             }
         }
-    }
-    /* don't indent first list
-    I'm sure I could do this smarter with margins, but no longer care enough
-    */
-    .section >ul, .section >ol {
-        padding-left: 1em;
     }
     dt {
         font-variant: small-caps;
@@ -156,12 +145,24 @@ article {
         overflow: auto;
         padding: 10px;
     }
-    
+    ul.tags {
+        font-size: 0.8em;
+        display: inline;
+        line-height: 1;
+        li {
+            display: inline;
+            list-style-type: none;
+            &:before { content: ' — '; };
+        }
+        li:first-child {
+            &:before { content: none; };
+        };
+    }
 }
 
-#article-list {
+#article-list, #tag-list {
     margin-top: 2.2em;
-    ol li {
+    ul li {
         line-height: 1.2em;
         list-style-type: none;
         padding-bottom: 10px;
@@ -185,7 +186,7 @@ article {
 footer {
     background: #fff;
     color: #666;
-    font-family:helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-size:13px;
     letter-spacing:4px;
     margin-left: 20px;

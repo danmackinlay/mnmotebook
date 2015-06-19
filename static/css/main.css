@@ -14,7 +14,7 @@ body {
   background: #fff;
   color: #333;
   font: 20px "Garamond EB", Garamond, Baskerville, bodyfont, serif;
-  line-height: 30px;
+  line-height: 1.5;
   max-width: 30em;
   margin: 60px 14px 0 64px;
 }
@@ -89,167 +89,166 @@ h4 {
 /* line 68, ../../compass/src/main.scss */
 .tag, .tags {
   font-variant: small-caps;
+  text-transform: capitalize;
+  font-family: "Garamond EB", Garamond, Baskerville, bodyfont, serif;
+  padding: 0;
 }
 
-/* line 72, ../../compass/src/main.scss */
+/* line 75, ../../compass/src/main.scss */
 time {
   color: #705050;
   font-size: 70%;
   font-style: italic;
 }
 
-/* line 78, ../../compass/src/main.scss */
+/* line 81, ../../compass/src/main.scss */
 header {
-  padding-bottom: 20px;
+  padding-bottom: 0;
 }
-/* line 80, ../../compass/src/main.scss */
+/* line 83, ../../compass/src/main.scss */
 header a {
   border-bottom: none;
 }
-/* line 82, ../../compass/src/main.scss */
+/* line 85, ../../compass/src/main.scss */
 header a#page-title {
   font-weight: bold;
 }
-/* line 84, ../../compass/src/main.scss */
-header ul.tags {
-  /* font-size: 0.8em; */
-  display: inline;
-  line-height: 1em;
-}
-/* line 88, ../../compass/src/main.scss */
-header ul.tags li {
-  display: inline;
-  list-style-type: none;
-}
-/* line 91, ../../compass/src/main.scss */
-header ul.tags li:after {
-  content: ' — ';
-}
-/* line 94, ../../compass/src/main.scss */
-header ul.tags li:last-child:after {
-  content: none;
-}
 
-/* line 99, ../../compass/src/main.scss */
-article {
-  /* don't indent first list
-  I'm sure I could do this smarter with margins, but no longer care enough
-  */
-}
-/* line 100, ../../compass/src/main.scss */
+/* line 90, ../../compass/src/main.scss */
 article img {
   border: none;
 }
-/* line 104, ../../compass/src/main.scss */
+/* line 94, ../../compass/src/main.scss */
 article blockquote {
   border-left: 1px solid #A5ABAB;
   margin: 0px;
   padding: 0 12px 0 12px;
 }
-/* line 110, ../../compass/src/main.scss */
+/* line 100, ../../compass/src/main.scss */
 article p {
   /* line-height: 30px; */
   margin: 0.5em auto;
   text-indent: 0px;
 }
-/* line 114, ../../compass/src/main.scss */
+/* line 104, ../../compass/src/main.scss */
 article p.caption {
   font-size: 80%;
   margin-top: 0;
   text-align: center;
 }
-/* line 121, ../../compass/src/main.scss */
+/* line 111, ../../compass/src/main.scss */
 article ul, article ol {
-  padding: .5em 0em 0.3em 3.2em;
+  padding: 0 0 0.3em 1em;
+  margin-top: 0;
+  /* indent inner list more */
 }
-/* line 123, ../../compass/src/main.scss */
+/* line 115, ../../compass/src/main.scss */
+article ul ul, article ul ol, article ol ul, article ol ol {
+  padding: 0 0 0 2.2em;
+}
+/* line 118, ../../compass/src/main.scss */
 article ul li, article ol li {
   line-height: 30px;
-  padding: 6px 0 0 0;
+  margin: 0.35em 0;
 }
-/* line 126, ../../compass/src/main.scss */
+/* line 121, ../../compass/src/main.scss */
 article ul li p, article ol li p {
   margin: 0.35em auto;
 }
-/* line 134, ../../compass/src/main.scss */
-article .section > ul, article .section > ol {
-  padding-left: 1em;
-}
-/* line 137, ../../compass/src/main.scss */
+/* line 126, ../../compass/src/main.scss */
 article dt {
   font-variant: small-caps;
 }
-/* line 139, ../../compass/src/main.scss */
+/* line 128, ../../compass/src/main.scss */
 article dt:after {
   content: ':';
 }
-/* line 142, ../../compass/src/main.scss */
+/* line 131, ../../compass/src/main.scss */
 article strong {
   color: #555555;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
 }
-/* line 148, ../../compass/src/main.scss */
+/* line 137, ../../compass/src/main.scss */
 article tt, article pre {
   background-color: #fafafa;
   font-family: Inconsolata, Monaco, monospace;
   line-height: 1.2em;
   font-size: 0.8em;
 }
-/* line 155, ../../compass/src/main.scss */
+/* line 144, ../../compass/src/main.scss */
 article pre {
   overflow: auto;
   padding: 10px;
 }
+/* line 148, ../../compass/src/main.scss */
+article ul.tags {
+  font-size: 0.8em;
+  display: inline;
+  line-height: 1;
+}
+/* line 152, ../../compass/src/main.scss */
+article ul.tags li {
+  display: inline;
+  list-style-type: none;
+}
+/* line 155, ../../compass/src/main.scss */
+article ul.tags li:before {
+  content: ' — ';
+}
+/* line 158, ../../compass/src/main.scss */
+article ul.tags li:first-child:before {
+  content: none;
+}
 
-/* line 162, ../../compass/src/main.scss */
-#article-list {
+/* line 163, ../../compass/src/main.scss */
+#article-list, #tag-list {
   margin-top: 2.2em;
 }
-/* line 164, ../../compass/src/main.scss */
-#article-list ol li {
+/* line 165, ../../compass/src/main.scss */
+#article-list ul li, #tag-list ul li {
   line-height: 1.2em;
   list-style-type: none;
   padding-bottom: 10px;
 }
 
-/* line 171, ../../compass/src/main.scss */
+/* line 172, ../../compass/src/main.scss */
 .note {
   background: #efefef;
   margin: 1em 0;
 }
-/* line 174, ../../compass/src/main.scss */
+/* line 175, ../../compass/src/main.scss */
 .note p {
   display: inline;
 }
-/* line 176, ../../compass/src/main.scss */
+/* line 177, ../../compass/src/main.scss */
 .note p.first {
   font-weight: bold;
 }
-/* line 178, ../../compass/src/main.scss */
+/* line 179, ../../compass/src/main.scss */
 .note p.first:after {
   content: ' : ';
 }
 
-/* line 185, ../../compass/src/main.scss */
+/* line 186, ../../compass/src/main.scss */
 footer {
   background: #fff;
   color: #666;
-  font-family: helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 13px;
   letter-spacing: 4px;
   margin-left: 20px;
 }
-/* line 192, ../../compass/src/main.scss */
+/* line 193, ../../compass/src/main.scss */
 footer a {
   border-bottom: none;
   color: #c0c0c0;
 }
-/* line 196, ../../compass/src/main.scss */
+/* line 197, ../../compass/src/main.scss */
 footer li {
   display: inline;
 }
-/* line 199, ../../compass/src/main.scss */
+/* line 200, ../../compass/src/main.scss */
 footer p {
   text-align: right;
 }
