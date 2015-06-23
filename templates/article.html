@@ -10,10 +10,9 @@
     <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> :
         <a href="{{ SITEURL }}/{{ article.url }}" id="page-title">{{ article.title }}</a></h1>
     {% if not HIDE_DATE %}
+          <time class="created" datetime="{{ article.date.isoformat() }}">Created {{ article.locale_date }}</time>
       {% if article.modified is defined %}
-          <time datetime="{{ article.modified.isoformat()}}"> {{ article.locale_modified }}</time>
-      {% else %}
-          <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+          <time class="modified" datetime="{{ article.modified.isoformat()}}">/ Updated {{ article.locale_modified }}</time>
       {% endif %}
     {% endif %}
 {% endblock header %}
