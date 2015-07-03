@@ -20,8 +20,9 @@ body {
 }
 
 a {
-    border-bottom: #999 1px solid;
-    color: #303030;
+    /* border-bottom: #999 1px solid; */
+    border-bottom: none;
+    color: #BBB;
     text-decoration: none;
     &:hover { color: #999; }
     /* underlines look dumb on figures */
@@ -39,6 +40,9 @@ a {
     margin-top: 1.8em;
     margin-left: -1em;
     font-weight: normal;
+    a {
+        color: $color;
+    }
 }
 
 h1 {
@@ -92,9 +96,11 @@ article {
     }
 
     blockquote {
-        border-left: 1px solid #A5ABAB;
         margin:0px;
         padding:0 12px 0 12px;
+        border-left: 0.5em solid #EEE;
+        margin: 0px;
+        border-top: 0.2em solid #EEE;
     }
 
     p {
