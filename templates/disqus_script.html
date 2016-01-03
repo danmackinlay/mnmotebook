@@ -2,6 +2,7 @@
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
+{# NB comments are only enabled for articles, so the if block is uneccessary #}
 {% if article %}
 	this.page.url = "{{ SITEURL }}/{{ article.url }}";
 	this.page.identifier = "{{ article.url }}";
