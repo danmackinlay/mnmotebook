@@ -6,6 +6,7 @@
       <meta name="tags" content="{{tag}}" />
     {% endfor %}
 {% endblock %}
+
 {% block header %}
     <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> :
         <a href="{{ SITEURL }}/{{ article.url }}" id="page-title">{{ article.title }}</a></h1>
@@ -16,6 +17,10 @@
       {% endif %}
     {% endif %}
 {% endblock header %}
+
+{% block canonical_rel %}
+	<link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
+{% endblock %}
 
 {% block content %}
 <article>
