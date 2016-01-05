@@ -12,7 +12,7 @@ and released under the GPL licence.
 Settings
 ~~~~~~~~
 
-There's one additional setting used by this theme, if present:
+There's two additional settings used by this theme, if present:
 
 ::
 
@@ -20,6 +20,10 @@ There's one additional setting used by this theme, if present:
 
 If ``HIDE_DATE`` is set to ``True``, dates won't be displayed under the blog post titles.
 
+There's also a footer slogan::
+
+    SLOGAN = "My site rulez"
+    
 
 Compass
 ~~~~~~~
