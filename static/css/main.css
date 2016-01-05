@@ -253,7 +253,7 @@ article ul.tags li:first-child:before {
 footer {
   background: #fff;
   color: #666;
-  border-top: #666 0.1em solid;
+  border-top: #c0c0c0 0.1em solid;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 70%;
   letter-spacing: 0.2em;
