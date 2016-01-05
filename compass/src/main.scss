@@ -97,7 +97,7 @@ article {
 
     blockquote {
         margin:0px;
-        padding:0 12px 0 12px;
+        padding:0 1em 0 2em;
         border-left: 0.5em solid #EEE;
         margin: 0px;
         border-top: 0.2em solid #EEE;
@@ -106,7 +106,7 @@ article {
     p {
         /* line-height: 30px; */
         margin: 0.5em auto;
-        text-indent: 0px;
+        text-indent: 0;
         &.caption {
             font-size: 80%;
             margin-top: 0;
@@ -192,10 +192,14 @@ article {
 footer {
     background: #fff;
     color: #666;
+    border-top: #666 0.1em solid;
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size:13px;
-    letter-spacing:4px;
-    margin-left: 20px;
+    font-size: 70%;
+    letter-spacing: 0.2em;
+    margin: 3em 0 0 3em;
+    padding-top: 1.1em;
+    text-align: right;
+    
     a {
         border-bottom: none;
         color: #c0c0c0;
@@ -207,6 +211,10 @@ footer {
         text-align: right;
     }
     aside {
-        letter-spacing: 0;
+        letter-spacing: 0.05em;
+        display: inline;
+    }
+    nav {
+        display: inline;
     }
 }
