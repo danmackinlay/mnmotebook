@@ -39,5 +39,8 @@ or maybe try `scout <https://mhs.github.io/scout-app/>`_.
 Plugins
 ~~~~~~~~~~~~~~
 
-This theme sorts by "modified" date; if not all your articles have "modifed" dates, you might want to use the "always modified" plugin.
+This theme sorts by "modified" date;
+if not all your articles have "modifed" dates, you might want to use the
+`always_modified <https://github.com/getpelican/pelican-plugins/tree/master/always_modified>`_ 
+plugin.
 
