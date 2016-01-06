@@ -1,12 +1,10 @@
 @charset "UTF-8";
 /*
     Theme Name: mnmotebook
-    Theme URI: http://mathieu.agopian.info/mnmlist/theme.html
-    Description: Theme adapted from http://mathieu.agopian.info/mnmlist/theme.html by Mathieu Agopian. That was in turn adapted from http://mnmlist.com/theme/ from Leo Babauta, a very clean minimalist theme, without comments, search, archives or other features.
+    Theme URI: https://github.com/howthebodyworks/mnmotebook
+    Description: Theme (heavily) adapted from http://mathieu.agopian.info/mnmlist/theme.html by Mathieu Agopian. That was in turn adapted from http://mnmlist.com/theme/ from Leo Babauta, a very clean minimalist theme, without comments, search, archives or other features.
     Author: Dan MacKinlay
-    Author URI: http://livingthing.danmackinlay.name
-
-    This theme is uncopyrighted, free, and offered as is.
+    Author URI: http://danmackinlay.name
 */
 @import url("pygment.css");
 /* line 13, main.scss */
