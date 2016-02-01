@@ -28,7 +28,11 @@
         {% if TAG_FEED_RSS and tag %}
         <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
         {% endif %}
-		{% block canonical_rel %}{% endblock %}
+        {% block icon %}
+        <link rel="shortcut icon" type="image/ico" href="{{ SITEURL }}/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="{{ SITEURL }}/icon.png">
+        {% endblock icon %}
+        {% block canonical_rel %}{% endblock %}
         <!--[if IE]>
                 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
