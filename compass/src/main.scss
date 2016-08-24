@@ -197,7 +197,7 @@ footer {
     margin: 3em 0 0 3em;
     padding-top: 1.1em;
     text-align: right;
-    
+
     a {
         border-bottom: none;
         color: #c0c0c0;
@@ -215,4 +215,15 @@ footer {
     nav {
         display: inline;
     }
+}
+
+/* de-nasty ipynb */
+#mnmotebook-body {
+  .text_cell .prompt {
+    width: 0;
+    min-width: 0;
+  }
+  .code_cell {
+      font-size: 0.8em;
+  }
 }
