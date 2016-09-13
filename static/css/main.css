@@ -16,6 +16,10 @@ body {
   max-width: 38em;
   margin: 60px 14px 0 64px;
 }
+/* not sure what magic css makes these cells get wide, but this overrides: */
+#mnmotebook-body .inner_cell {
+  max-width: 38em;
+}
 
 /* line 22, main.scss */
 a {
@@ -285,6 +289,7 @@ footer nav {
 #mnmotebook-body .text_cell .prompt {
     width: 0;
     min-width: 0;
+    padding: 0;
 }
 #mnmotebook-body .code_cell {
     font-size: 0.8em;
