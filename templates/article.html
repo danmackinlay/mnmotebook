@@ -2,9 +2,11 @@
 {% block title %}{{ super() }} : {{ article.title|striptags }}{% endblock %}
 {% block head %}
     {{ super() }}
-    {% for tag in article.tags %}
-      <meta name="tags" content="{{tag}}" />
-    {% endfor %}
+    {% if article.tags is iterable %}
+      {% for tag in article.tags %}
+        <meta name="tags" content="{{tag}}" />
+      {% endfor %}
+    {% endif %}
 {% endblock %}
 
 {% block header %}
@@ -25,16 +27,17 @@
 {% block content %}
 <article>
     {{ article.content }}
-    {% if article.tags %}
     <nav>
-    <ul class="tags">
-        {% for tag in article.tags|sort %}
-          <li class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
-        {% endfor %}
-    </ol>
-    </nav>
+    {% if article.tags is iterable %}
+      <ul class="tags">
+          {% for tag in article.tags|sort %}
+            <li class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+          {% endfor %}
+      </ol>
+    {% else %}
+      <p class="tags">Untagged</p>
     {% endif %}
-
+    </nav>
 </article>
 {% include 'disqus_script.html' %}
 {% endblock %}
