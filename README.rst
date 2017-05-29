@@ -23,10 +23,10 @@ If ``HIDE_DATE`` is set to ``True``, dates won't be displayed under the blog pos
 There's also a footer slogan::
 
     SLOGAN = "My site rulez"
-    
 
-Compass
-~~~~~~~
+
+Compass/sass
+~~~~~~~~~~~~~~~~
 
 The ``main.css`` file is generated from the ``compass/src/main.scss`` sass file, using http://compass-style.org/
 
@@ -34,13 +34,14 @@ From the command line::
 
     compass compile
 
-or maybe try `scout <https://mhs.github.io/scout-app/>`_.
+or maybe try `scout <https://mhs.github.io/scout-app/>`_, or use ``libsass``/``sassc``
+
+    sassc -l compass/src/main.scss static/css/main.css
 
 Plugins
 ~~~~~~~~~~~~~~
 
 This theme sorts by "modified" date;
 if not all your articles have "modifed" dates, you might want to use the
-`always_modified <https://github.com/getpelican/pelican-plugins/tree/master/always_modified>`_ 
+`always_modified <https://github.com/getpelican/pelican-plugins/tree/master/always_modified>`_
 plugin.
-
