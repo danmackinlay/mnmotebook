@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 {% block header %}
+<header>
 {% if page %}
-    <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> :
-        <a href="{{ SITEURL }}/{{ page.url }}" id="page-title">{{ page.title|striptags }}</a></h1>
+    <h2 id="site-title"><a href="{{ SITEURL }}" >{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> :</h2>
+    <h1 id="page-title">
+        <a href="{{ SITEURL }}/{{ page.url }}" >{{ page.title|striptags }}</a>
+    </h1>
 {% else  %}
     <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a></h1>
 {% endif  %}
+</header>
 {% endblock header %}
 
 {% block canonical_rel %}<link rel="canonical" href="{{ SITEURL }}">{% endblock %}
@@ -19,12 +23,19 @@
 {% endif %}
 
 {% if articles %}
-      <nav id="article-list">
+      <nav id="content-list">
           <ul>
           {% for article in articles|sort(reverse=True,attribute='modified') %}
             <li>
-              <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
-              {% if not HIDE_DATE %} — 
+              <a class="article-link" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
+                <span class="article-title">{{ article.title }}</span>
+                {% if article.rubric is defined %}
+                <span class="article-rubric">
+                  {{ article.rubric }}
+                </span>
+                {% endif %}
+              </a>
+              {% if not HIDE_DATE %} —
                 {% if article.modified is defined %}
                     <time datetime="{{ article.modified.isoformat()}}"> {{ article.locale_modified }}</time>
                 {% else %}
@@ -34,7 +45,7 @@
             </li>
           {% endfor %}
           </ol>
-      </nav><!-- #article-list -->
+      </nav><!-- #content-list -->
 {% else %}
     No posts found.
 {% endif %}

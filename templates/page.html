@@ -1,14 +1,11 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
-{% block header %}
-    <h1><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> :
-        <a href="{{ SITEURL }}/{{ page.url }}" id="page-title">{{ page.title|striptags }}</a></h1>
-{% endblock header %}
+
 {% block canonical_rel %}
 <link rel="canonical" href="{{ SITEURL }}/{{ page.url }}">
 {% endblock canonical_rel %}
 {% block content %}
-<article>    
+<article>
     {{ page.content }}
 </article>
 {% endblock %}

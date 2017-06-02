@@ -22,9 +22,9 @@ body, #mnmotebook-body .inner_cell {
 a {
     /* border-bottom: #999 1px solid; */
     border-bottom: none;
-    color: #BBB;
+    color: #888;
     text-decoration: none;
-    &:hover { color: #999; }
+    &:hover { color: #BBB; }
     /* underlines look dumb on figures */
     &.image-reference {
         text-decoration: none;
@@ -45,16 +45,13 @@ a {
     }
 }
 
+#site-title {font-style: oblique;}
+#page-title {font-weight: normal;}
+
 h1 {
-    @include heading(1.5em, #222);
+    @include heading(1.3em, #222);
     margin-bottom: 0;
     font-variant: normal;
-    a#site-title {
-        font-style: oblique;
-    }
-    a#page-title {
-	    font-weight: normal;
-    }
 }
 
 h2 {
@@ -88,9 +85,27 @@ header {
         border-bottom: none;
         &#page-title { font-weight: bold; }
     }
+
+    h1 {
+        display: inline;
+        margin-left: 0;
+    }
+
+    h2 {
+        display: inline;
+    }
+
 }
 
-article {
+.detail {
+  article{
+    .article-rubric {
+      font-style: italic;
+      text-align: right;
+      margin-bottom: 1.4em;
+      margin-top: 0.4em;
+      font-size: 1.3em;
+    }
     img {
         border: none;
     }
@@ -163,29 +178,49 @@ article {
             &:before { content: none; };
         };
     }
+
+    .note {
+        background: #efefef;
+        margin: 1em 0;
+        p {
+            display: inline;
+            &.first {
+                font-weight: bold;
+                &:after {
+                    content: ' : ';
+                }
+            }
+        }
+    }
+  }
+  header {
+    h1 {
+
+    }
+    h2 {}
+  }
 }
 
-#article-list, #tag-list {
+.index {
+  #content-list, #tag-list {
     margin-top: 2.2em;
     ul li {
         line-height: 1.2em;
         list-style-type: none;
         padding-bottom: 10px;
     }
-}
-
-.note {
-    background: #efefef;
-    margin: 1em 0;
-    p {
-        display: inline;
-        &.first {
-            font-weight: bold;
-            &:after {
-                content: ' : ';
-            }
-        }
+    .article-title {
+        color: #888;
     }
+    // .article-rubric:before {
+    //   content: ";";
+    // }
+    .article-rubric {
+        font-size: 80%;
+        font-style: italic;
+        color: #777;
+    }
+  }
 }
 
 footer {

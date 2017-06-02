@@ -45,12 +45,10 @@
 
 </head>
 
-<body id="mnmotebook-body">
+<body id="mnmotebook-body" class="{% block bodyclass %}index{% endblock %}">
         {% include 'github.html' %}
-        <header>
         {% block header %}
         {% endblock %}
-        </header>
 
         {% block content %}
         {% endblock %}
