@@ -37,6 +37,7 @@
               </a>
               {% if not HIDE_DATE %} —
                 {% if article.modified is defined %}
+                    <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time> …
                     <time datetime="{{ article.modified.isoformat()}}"> {{ article.locale_modified }}</time>
                 {% else %}
                     <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
