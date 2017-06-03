@@ -36,12 +36,13 @@
                 {% endif %}
               </a>
               {% if not HIDE_DATE %} —
+              <div class="article-date">
                 {% if article.modified is defined %}
-                    <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time> …
-                    <time datetime="{{ article.modified.isoformat()}}"> {{ article.locale_modified }}</time>
+                    <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>…<time datetime="{{ article.modified.isoformat()}}"> {{ article.locale_modified }}</time>
                 {% else %}
                     <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
                 {% endif %}
+              </div>
               {% endif %}
             </li>
           {% endfor %}
