@@ -30,8 +30,8 @@
               <a class="article-link" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
                 <span class="article-title">{{ article.title }}</span>
                 {% if article.rubric is defined %}
-                <span class="article-rubric">
-                  {{ article.rubric }}
+                — <span class="article-rubric">
+                  [ {{ article.rubric }} ]
                 </span>
                 {% endif %}
               </a>
