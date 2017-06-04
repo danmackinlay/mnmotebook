@@ -122,123 +122,131 @@ header {
   header h2 {
     display: inline; }
 
-/* line 102, compass/src/main.scss */
-.detail article .article-rubric {
+/* line 101, compass/src/main.scss */
+article .article-rubric {
   font-style: italic;
   text-align: right;
   margin-bottom: 1.4em;
   margin-top: 0.4em;
   font-size: 1.3em; }
 
-/* line 109, compass/src/main.scss */
-.detail article img {
+/* line 108, compass/src/main.scss */
+article img {
   border: none; }
 
-/* line 113, compass/src/main.scss */
-.detail article blockquote {
+/* line 112, compass/src/main.scss */
+article blockquote {
   margin: 0px;
   padding: 0 1em 0 2em;
   border-left: 0.5em solid #EEE;
   margin: 0px;
   border-top: 0.2em solid #EEE; }
 
-/* line 121, compass/src/main.scss */
-.detail article p {
+/* line 120, compass/src/main.scss */
+article p {
   /* line-height: 30px; */
   margin: 0.5em auto;
   text-indent: 0; }
-  /* line 125, compass/src/main.scss */
-  .detail article p.caption {
+  /* line 124, compass/src/main.scss */
+  article p.caption {
     font-size: 80%;
     margin-top: 0;
     text-align: center; }
 
-/* line 132, compass/src/main.scss */
-.detail article ul, .detail article ol {
+/* line 131, compass/src/main.scss */
+article ul, article ol {
   padding: 0 0 0.3em 1em;
   margin-top: 0;
   /* indent inner list more */ }
-  /* line 136, compass/src/main.scss */
-  .detail article ul ul, .detail article ul ol, .detail article ol ul, .detail article ol ol {
+  /* line 135, compass/src/main.scss */
+  article ul ul, article ul ol, article ol ul, article ol ol {
     padding: 0 0 0 2.2em; }
-  /* line 139, compass/src/main.scss */
-  .detail article ul li, .detail article ol li {
+  /* line 138, compass/src/main.scss */
+  article ul li, article ol li {
     line-height: 30px;
     margin: 0.35em 0; }
-    /* line 142, compass/src/main.scss */
-    .detail article ul li p, .detail article ol li p {
+    /* line 141, compass/src/main.scss */
+    article ul li p, article ol li p {
       margin: 0.35em auto; }
 
-/* line 147, compass/src/main.scss */
-.detail article dt {
+/* line 146, compass/src/main.scss */
+article dt {
   font-variant: small-caps; }
-  /* line 149, compass/src/main.scss */
-  .detail article dt:after {
+  /* line 148, compass/src/main.scss */
+  article dt:after {
     content: ':'; }
 
-/* line 152, compass/src/main.scss */
-.detail article strong {
+/* line 151, compass/src/main.scss */
+article strong {
   color: #555555;
   font-weight: bold; }
 
-/* line 157, compass/src/main.scss */
-.detail article tt, .detail article pre {
+/* line 156, compass/src/main.scss */
+article tt, article pre {
   background-color: #fafafa;
   font-family: Inconsolata, Monaco, monospace;
   line-height: 1.4em;
   font-size: 0.85em; }
 
-/* line 164, compass/src/main.scss */
-.detail article pre {
+/* line 163, compass/src/main.scss */
+article pre {
   overflow: auto;
   padding: 10px; }
 
-/* line 168, compass/src/main.scss */
-.detail article ul.tags {
+/* line 167, compass/src/main.scss */
+article ul.tags {
   font-size: 0.8em;
   display: inline;
   line-height: 1; }
-  /* line 172, compass/src/main.scss */
-  .detail article ul.tags li {
+  /* line 171, compass/src/main.scss */
+  article ul.tags li {
     display: inline;
     list-style-type: none; }
-    /* line 175, compass/src/main.scss */
-    .detail article ul.tags li:before {
+    /* line 174, compass/src/main.scss */
+    article ul.tags li:before {
       content: ' — '; }
-  /* line 178, compass/src/main.scss */
-  .detail article ul.tags li:first-child:before {
+  /* line 177, compass/src/main.scss */
+  article ul.tags li:first-child:before {
     content: none; }
 
-/* line 182, compass/src/main.scss */
-.detail article .note {
+/* line 181, compass/src/main.scss */
+article .note {
   background: #efefef;
-  margin: 1em 0; }
+  margin: 1em 1em 1em 0.5em;
+  padding: 0.4em 0.7em; }
   /* line 185, compass/src/main.scss */
-  .detail article .note p {
+  article .note p {
     display: inline; }
     /* line 187, compass/src/main.scss */
-    .detail article .note p.first {
+    article .note p.first {
       font-weight: bold; }
       /* line 189, compass/src/main.scss */
-      .detail article .note p.first:after {
+      article .note p.first:after {
         content: ' : '; }
 
-/* line 205, compass/src/main.scss */
+/* line 198, compass/src/main.scss */
 .index #content-list, .index #tag-list {
   margin-top: 2.2em; }
-  /* line 207, compass/src/main.scss */
+  /* line 200, compass/src/main.scss */
   .index #content-list ul li, .index #tag-list ul li {
     line-height: 1.2em;
     list-style-type: none;
-    padding-bottom: 10px; }
-  /* line 212, compass/src/main.scss */
+    padding-bottom: 10px;
+    padding-left: 1em;
+    text-indent: -1em; }
+  /* line 207, compass/src/main.scss */
   .index #content-list .article-title, .index #tag-list .article-title {
     color: #888; }
-  /* line 218, compass/src/main.scss */
+  /* line 213, compass/src/main.scss */
   .index #content-list .article-rubric, .index #tag-list .article-rubric {
     font-size: 80%;
     font-style: italic;
     color: #777; }
+  /* line 218, compass/src/main.scss */
+  .index #content-list .article-date, .index #tag-list .article-date {
+    display: inline-block;
+    margin-left: 0;
+    text-indent: 0; }
 
 /* line 226, compass/src/main.scss */
 footer {

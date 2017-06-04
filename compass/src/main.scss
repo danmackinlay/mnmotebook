@@ -97,107 +97,100 @@ header {
 
 }
 
-.detail {
-  article{
-    .article-rubric {
-      font-style: italic;
-      text-align: right;
-      margin-bottom: 1.4em;
-      margin-top: 0.4em;
-      font-size: 1.3em;
-    }
-    img {
-        border: none;
-    }
-
-    blockquote {
-        margin:0px;
-        padding:0 1em 0 2em;
-        border-left: 0.5em solid #EEE;
-        margin: 0px;
-        border-top: 0.2em solid #EEE;
-    }
-
-    p {
-        /* line-height: 30px; */
-        margin: 0.5em auto;
-        text-indent: 0;
-        &.caption {
-            font-size: 80%;
-            margin-top: 0;
-            text-align: center;
-        }
-    }
-
-    ul, ol {
-        padding: 0 0 0.3em 1em;
-        margin-top: 0;
-        /* indent inner list more */
-        ul, ol {
-            padding: 0 0 0 2.2em;
-        }
-        li {
-            line-height: 30px;
-            margin: 0.35em 0;
-            p {
-                margin: 0.35em auto;
-            }
-        }
-    }
-    dt {
-        font-variant: small-caps;
-        &:after { content: ':'; };
-    }
-
-    strong {
-        color: #555555;
-        font-weight: bold;
-    }
-
-    tt, pre {
-        background-color: #fafafa;
-        font-family: Inconsolata, Monaco, monospace;
-        line-height: 1.4em;
-        font-size: 0.85em;
-    }
-
-    pre {
-        overflow: auto;
-        padding: 10px;
-    }
-    ul.tags {
-        font-size: 0.8em;
-        display: inline;
-        line-height: 1;
-        li {
-            display: inline;
-            list-style-type: none;
-            &:before { content: ' — '; };
-        }
-        li:first-child {
-            &:before { content: none; };
-        };
-    }
-
-    .note {
-        background: #efefef;
-        margin: 1em 0;
-        p {
-            display: inline;
-            &.first {
-                font-weight: bold;
-                &:after {
-                    content: ' : ';
-                }
-            }
-        }
-    }
+article{
+  .article-rubric {
+    font-style: italic;
+    text-align: right;
+    margin-bottom: 1.4em;
+    margin-top: 0.4em;
+    font-size: 1.3em;
   }
-  header {
-    h1 {
+  img {
+      border: none;
+  }
 
-    }
-    h2 {}
+  blockquote {
+      margin:0px;
+      padding:0 1em 0 2em;
+      border-left: 0.5em solid #EEE;
+      margin: 0px;
+      border-top: 0.2em solid #EEE;
+  }
+
+  p {
+      /* line-height: 30px; */
+      margin: 0.5em auto;
+      text-indent: 0;
+      &.caption {
+          font-size: 80%;
+          margin-top: 0;
+          text-align: center;
+      }
+  }
+
+  ul, ol {
+      padding: 0 0 0.3em 1em;
+      margin-top: 0;
+      /* indent inner list more */
+      ul, ol {
+          padding: 0 0 0 2.2em;
+      }
+      li {
+          line-height: 30px;
+          margin: 0.35em 0;
+          p {
+              margin: 0.35em auto;
+          }
+      }
+  }
+  dt {
+      font-variant: small-caps;
+      &:after { content: ':'; };
+  }
+
+  strong {
+      color: #555555;
+      font-weight: bold;
+  }
+
+  tt, pre {
+      background-color: #fafafa;
+      font-family: Inconsolata, Monaco, monospace;
+      line-height: 1.4em;
+      font-size: 0.85em;
+  }
+
+  pre {
+      overflow: auto;
+      padding: 10px;
+  }
+  ul.tags {
+      font-size: 0.8em;
+      display: inline;
+      line-height: 1;
+      li {
+          display: inline;
+          list-style-type: none;
+          &:before { content: ' — '; };
+      }
+      li:first-child {
+          &:before { content: none; };
+      };
+  }
+
+  .note {
+      background: #efefef;
+      margin: 1em 1em 1em 0.5em;
+      padding: 0.4em 0.7em;
+      p {
+          display: inline;
+          &.first {
+              font-weight: bold;
+              &:after {
+                  content: ' : ';
+              }
+          }
+      }
   }
 }
 
@@ -205,20 +198,27 @@ header {
   #content-list, #tag-list {
     margin-top: 2.2em;
     ul li {
-        line-height: 1.2em;
-        list-style-type: none;
-        padding-bottom: 10px;
+      line-height: 1.2em;
+      list-style-type: none;
+      padding-bottom: 10px;
+      padding-left: 1em;
+      text-indent: -1em;
     }
     .article-title {
-        color: #888;
+      color: #888;
     }
     // .article-rubric:before {
     //   content: ";";
     // }
     .article-rubric {
-        font-size: 80%;
-        font-style: italic;
-        color: #777;
+      font-size: 80%;
+      font-style: italic;
+      color: #777;
+    }
+    .article-date {
+      display: inline-block;
+      margin-left: 0;
+      text-indent: 0;
     }
   }
 }
