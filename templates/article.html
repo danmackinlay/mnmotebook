@@ -18,11 +18,16 @@
   <h1>
       <a href="{{ SITEURL }}/{{ article.url }}" id="page-title">{{ article.title }}</a>
   </h1>
+  {% if article.rubric is defined %}
+    <h3 class="article-rubric">{{ article.rubric }} </h3>
+  {% endif %}
   {% if not HIDE_DATE %}
+    <div class="article-date">
       <time class="created" datetime="{{ article.date.isoformat() }}">Created {{ article.locale_date }}</time>
       {% if article.modified is defined %}
         <time class="modified" datetime="{{ article.modified.isoformat()}}">/ Updated {{ article.locale_modified }}</time>
       {% endif %}
+    </div>
   {% endif %}
 </header>
 {% endblock header %}
@@ -33,9 +38,6 @@
 
 {% block content %}
 <article >
-    {% if article.rubric is defined %}
-      <section class="article-rubric">{{ article.rubric }} </section>
-    {% endif %}
     {{ article.content }}
     <nav>
     {% if article.tags is iterable %}

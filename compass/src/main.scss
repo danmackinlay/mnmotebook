@@ -89,22 +89,25 @@ header {
     h1 {
         display: inline;
         margin-left: 0;
+        font-size: 1.4em;
     }
 
     h2 {
         display: inline;
     }
-
+    .article-rubric {
+      font-style: italic;
+      text-align: right;
+      margin-bottom: 0.2em;
+      margin-top: 0.4em;
+      font-size: 1.2em;
+      font-family: "Garamond EB", Garamond, Baskerville, bodyfont, serif;
+      max-width: 25em;
+      margin-left: auto;
+    }
 }
 
 article{
-  .article-rubric {
-    font-style: italic;
-    text-align: right;
-    margin-bottom: 1.4em;
-    margin-top: 0.4em;
-    font-size: 1.3em;
-  }
   img {
       border: none;
   }
