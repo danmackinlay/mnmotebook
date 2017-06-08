@@ -1,6 +1,29 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
 
+{% block header %}
+<header>
+  <h2><a href="{{ SITEURL }}" id="site-title">{{ SITENAME }} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> :
+  </h2>
+  <h1>
+      <a href="{{ SITEURL }}/{{ page.url }}" id="page-title">{{ page.title }}</a>
+  </h1>
+  {% if page.rubric is defined %}
+    <h3 class="article-rubric">{{ page.rubric }} </h3>
+  {% endif %}
+  {% if not HIDE_DATE %}
+    <div class="article-date">
+      {% if page.date is defined %}
+        <time class="created" datetime="{{ page.date.isoformat() }}">Created {{ page.locale_date }}</time>
+      {% endif %}
+      {% if page.modified is defined %}
+        <time class="modified" datetime="{{ page.modified.isoformat()}}">/ Updated {{ page.locale_modified }}</time>
+      {% endif %}
+    </div>
+  {% endif %}
+</header>
+{% endblock header %}
+
 {% block canonical_rel %}
 <link rel="canonical" href="{{ SITEURL }}/{{ page.url }}">
 {% endblock canonical_rel %}
