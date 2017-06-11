@@ -25,12 +25,6 @@ a {
     color: #888;
     text-decoration: none;
     &:hover { color: #BBB; }
-    /* underlines look dumb on figures */
-    &.image-reference {
-        text-decoration: none;
-        border-bottom: none;
-    }
-
 }
 
 @mixin heading ($font-size, $color: #333) {
@@ -111,6 +105,25 @@ article{
   img {
       border: none;
   }
+  /* underlines look dumb on figures */
+  a.image-reference {
+      text-decoration: none;
+      border-bottom: none;
+  }
+
+  .figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    p.caption, div.legend {
+      font-size: 80%;
+      margin-top: 0;
+      text-align: center;
+      margin-left: 3em;
+      margin-right: 5em;
+    }
+
+  }
 
   blockquote {
       margin:0px;
@@ -124,11 +137,6 @@ article{
       /* line-height: 30px; */
       margin: 0.5em auto;
       text-indent: 0;
-      &.caption {
-          font-size: 80%;
-          margin-top: 0;
-          text-align: center;
-      }
   }
 
   ul, ol {

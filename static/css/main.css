@@ -24,25 +24,20 @@ a {
   /* border-bottom: #999 1px solid; */
   border-bottom: none;
   color: #888;
-  text-decoration: none;
-  /* underlines look dumb on figures */ }
+  text-decoration: none; }
   /* line 27, compass/src/main.scss */
   a:hover {
     color: #BBB; }
-  /* line 29, compass/src/main.scss */
-  a.image-reference {
-    text-decoration: none;
-    border-bottom: none; }
 
-/* line 48, compass/src/main.scss */
+/* line 42, compass/src/main.scss */
 #site-title {
   font-style: oblique; }
 
-/* line 49, compass/src/main.scss */
+/* line 43, compass/src/main.scss */
 #page-title {
   font-weight: normal; }
 
-/* line 51, compass/src/main.scss */
+/* line 45, compass/src/main.scss */
 h1 {
   color: #222;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -52,11 +47,11 @@ h1 {
   font-weight: normal;
   margin-bottom: 0;
   font-variant: normal; }
-  /* line 43, compass/src/main.scss */
+  /* line 37, compass/src/main.scss */
   h1 a {
     color: #222; }
 
-/* line 57, compass/src/main.scss */
+/* line 51, compass/src/main.scss */
 h2 {
   color: #333;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -64,11 +59,11 @@ h2 {
   margin-top: 1.8em;
   margin-left: -1em;
   font-weight: normal; }
-  /* line 43, compass/src/main.scss */
+  /* line 37, compass/src/main.scss */
   h2 a {
     color: #333; }
 
-/* line 61, compass/src/main.scss */
+/* line 55, compass/src/main.scss */
 h3 {
   color: #333;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -76,11 +71,11 @@ h3 {
   margin-top: 1.8em;
   margin-left: -1em;
   font-weight: normal; }
-  /* line 43, compass/src/main.scss */
+  /* line 37, compass/src/main.scss */
   h3 a {
     color: #333; }
 
-/* line 65, compass/src/main.scss */
+/* line 59, compass/src/main.scss */
 h4 {
   color: #333;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -88,41 +83,41 @@ h4 {
   margin-top: 1.8em;
   margin-left: -1em;
   font-weight: normal; }
-  /* line 43, compass/src/main.scss */
+  /* line 37, compass/src/main.scss */
   h4 a {
     color: #333; }
 
-/* line 69, compass/src/main.scss */
+/* line 63, compass/src/main.scss */
 .tag, .tags {
   font-variant: small-caps;
   text-transform: capitalize;
   font-family: "Garamond EB", Garamond, Baskerville, bodyfont, serif;
   padding: 0; }
 
-/* line 76, compass/src/main.scss */
+/* line 70, compass/src/main.scss */
 time {
   color: #705050;
   font-size: 70%;
   font-style: italic; }
 
-/* line 82, compass/src/main.scss */
+/* line 76, compass/src/main.scss */
 header {
   padding-bottom: 0; }
-  /* line 84, compass/src/main.scss */
+  /* line 78, compass/src/main.scss */
   header a {
     border-bottom: none; }
-    /* line 86, compass/src/main.scss */
+    /* line 80, compass/src/main.scss */
     header a#page-title {
       font-weight: bold; }
-  /* line 89, compass/src/main.scss */
+  /* line 83, compass/src/main.scss */
   header h1 {
     display: inline;
     margin-left: 0;
     font-size: 1.4em; }
-  /* line 95, compass/src/main.scss */
+  /* line 89, compass/src/main.scss */
   header h2 {
     display: inline; }
-  /* line 98, compass/src/main.scss */
+  /* line 92, compass/src/main.scss */
   header .article-rubric {
     font-style: italic;
     text-align: right;
@@ -133,125 +128,130 @@ header {
     max-width: 25em;
     margin-left: auto; }
 
-/* line 111, compass/src/main.scss */
-article img {
-  border: none; }
-
-/* line 115, compass/src/main.scss */
-article blockquote {
-  margin: 0px;
-  padding: 0 1em 0 2em;
-  border-left: 0.5em solid #EEE;
-  margin: 0px;
-  border-top: 0.2em solid #EEE; }
-
-/* line 123, compass/src/main.scss */
-article p {
-  /* line-height: 30px; */
-  margin: 0.5em auto;
-  text-indent: 0; }
-  /* line 127, compass/src/main.scss */
-  article p.caption {
-    font-size: 80%;
+/* line 104, compass/src/main.scss */
+article {
+  /* underlines look dumb on figures */ }
+  /* line 105, compass/src/main.scss */
+  article img {
+    border: none; }
+  /* line 109, compass/src/main.scss */
+  article a.image-reference {
+    text-decoration: none;
+    border-bottom: none; }
+  /* line 114, compass/src/main.scss */
+  article .figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 118, compass/src/main.scss */
+    article .figure p.caption, article .figure div.legend {
+      font-size: 80%;
+      margin-top: 0;
+      text-align: center;
+      margin-left: 3em;
+      margin-right: 5em; }
+  /* line 128, compass/src/main.scss */
+  article blockquote {
+    margin: 0px;
+    padding: 0 1em 0 2em;
+    border-left: 0.5em solid #EEE;
+    margin: 0px;
+    border-top: 0.2em solid #EEE; }
+  /* line 136, compass/src/main.scss */
+  article p {
+    /* line-height: 30px; */
+    margin: 0.5em auto;
+    text-indent: 0; }
+  /* line 142, compass/src/main.scss */
+  article ul, article ol {
+    padding: 0 0 0.3em 1em;
     margin-top: 0;
-    text-align: center; }
-
-/* line 134, compass/src/main.scss */
-article ul, article ol {
-  padding: 0 0 0.3em 1em;
-  margin-top: 0;
-  /* indent inner list more */ }
-  /* line 138, compass/src/main.scss */
-  article ul ul, article ul ol, article ol ul, article ol ol {
-    padding: 0 0 0 2.2em; }
-  /* line 141, compass/src/main.scss */
-  article ul li, article ol li {
-    line-height: 30px;
-    margin: 0.35em 0; }
-    /* line 144, compass/src/main.scss */
-    article ul li p, article ol li p {
-      margin: 0.35em auto; }
-
-/* line 149, compass/src/main.scss */
-article dt {
-  font-variant: small-caps; }
-  /* line 151, compass/src/main.scss */
-  article dt:after {
-    content: ':'; }
-
-/* line 154, compass/src/main.scss */
-article strong {
-  color: #555555;
-  font-weight: bold; }
-
-/* line 159, compass/src/main.scss */
-article tt, article pre {
-  background-color: #fafafa;
-  font-family: Inconsolata, Monaco, monospace;
-  line-height: 1.4em;
-  font-size: 0.85em; }
-
-/* line 166, compass/src/main.scss */
-article pre {
-  overflow: auto;
-  padding: 10px; }
-
-/* line 170, compass/src/main.scss */
-article ul.tags {
-  font-size: 0.8em;
-  display: inline;
-  line-height: 1; }
+    /* indent inner list more */ }
+    /* line 146, compass/src/main.scss */
+    article ul ul, article ul ol, article ol ul, article ol ol {
+      padding: 0 0 0 2.2em; }
+    /* line 149, compass/src/main.scss */
+    article ul li, article ol li {
+      line-height: 30px;
+      margin: 0.35em 0; }
+      /* line 152, compass/src/main.scss */
+      article ul li p, article ol li p {
+        margin: 0.35em auto; }
+  /* line 157, compass/src/main.scss */
+  article dt {
+    font-variant: small-caps; }
+    /* line 159, compass/src/main.scss */
+    article dt:after {
+      content: ':'; }
+  /* line 162, compass/src/main.scss */
+  article strong {
+    color: #555555;
+    font-weight: bold; }
+  /* line 167, compass/src/main.scss */
+  article tt, article pre {
+    background-color: #fafafa;
+    font-family: Inconsolata, Monaco, monospace;
+    line-height: 1.4em;
+    font-size: 0.85em; }
   /* line 174, compass/src/main.scss */
-  article ul.tags li {
+  article pre {
+    overflow: auto;
+    padding: 10px; }
+  /* line 178, compass/src/main.scss */
+  article ul.tags {
+    font-size: 0.8em;
     display: inline;
-    list-style-type: none; }
-    /* line 177, compass/src/main.scss */
-    article ul.tags li:before {
-      content: ' — '; }
-  /* line 180, compass/src/main.scss */
-  article ul.tags li:first-child:before {
-    content: none; }
+    line-height: 1; }
+    /* line 182, compass/src/main.scss */
+    article ul.tags li {
+      display: inline;
+      list-style-type: none; }
+      /* line 185, compass/src/main.scss */
+      article ul.tags li:before {
+        content: ' — '; }
+    /* line 188, compass/src/main.scss */
+    article ul.tags li:first-child:before {
+      content: none; }
+  /* line 192, compass/src/main.scss */
+  article .note {
+    background: #efefef;
+    margin: 1em 1em 1em 0.5em;
+    padding: 0.4em 0.7em; }
+    /* line 196, compass/src/main.scss */
+    article .note p {
+      display: inline; }
+      /* line 198, compass/src/main.scss */
+      article .note p.first {
+        font-weight: bold; }
+        /* line 200, compass/src/main.scss */
+        article .note p.first:after {
+          content: ' : '; }
 
-/* line 184, compass/src/main.scss */
-article .note {
-  background: #efefef;
-  margin: 1em 1em 1em 0.5em;
-  padding: 0.4em 0.7em; }
-  /* line 188, compass/src/main.scss */
-  article .note p {
-    display: inline; }
-    /* line 190, compass/src/main.scss */
-    article .note p.first {
-      font-weight: bold; }
-      /* line 192, compass/src/main.scss */
-      article .note p.first:after {
-        content: ' : '; }
-
-/* line 201, compass/src/main.scss */
+/* line 209, compass/src/main.scss */
 .index #content-list, .index #tag-list {
   margin-top: 2.2em; }
-  /* line 203, compass/src/main.scss */
+  /* line 211, compass/src/main.scss */
   .index #content-list ul li, .index #tag-list ul li {
     line-height: 1.2em;
     list-style-type: none;
     padding-bottom: 10px;
     padding-left: 1em;
     text-indent: -1em; }
-  /* line 210, compass/src/main.scss */
+  /* line 218, compass/src/main.scss */
   .index #content-list .article-title, .index #tag-list .article-title {
     color: #888; }
-  /* line 216, compass/src/main.scss */
+  /* line 224, compass/src/main.scss */
   .index #content-list .article-rubric, .index #tag-list .article-rubric {
     font-size: 80%;
     font-style: italic;
     color: #777; }
-  /* line 221, compass/src/main.scss */
+  /* line 229, compass/src/main.scss */
   .index #content-list .article-date, .index #tag-list .article-date {
     display: inline-block;
     margin-left: 0;
     text-indent: 0; }
 
-/* line 229, compass/src/main.scss */
+/* line 237, compass/src/main.scss */
 footer {
   background: #fff;
   color: #666;
@@ -262,31 +262,31 @@ footer {
   margin: 3em 0 0 3em;
   padding-top: 1.1em;
   text-align: right; }
-  /* line 240, compass/src/main.scss */
+  /* line 248, compass/src/main.scss */
   footer a {
     border-bottom: none;
     color: #c0c0c0; }
-  /* line 244, compass/src/main.scss */
+  /* line 252, compass/src/main.scss */
   footer li {
     display: inline; }
-  /* line 247, compass/src/main.scss */
+  /* line 255, compass/src/main.scss */
   footer p {
     text-align: right; }
-  /* line 250, compass/src/main.scss */
+  /* line 258, compass/src/main.scss */
   footer aside {
     letter-spacing: 0.05em;
     display: inline; }
-  /* line 254, compass/src/main.scss */
+  /* line 262, compass/src/main.scss */
   footer nav {
     display: inline; }
 
 /* de-nasty ipynb */
-/* line 261, compass/src/main.scss */
+/* line 269, compass/src/main.scss */
 #mnmotebook-body .text_cell .prompt {
   width: 0;
   min-width: 0;
   padding: 0; }
 
-/* line 266, compass/src/main.scss */
+/* line 274, compass/src/main.scss */
 #mnmotebook-body .code_cell {
   font-size: 0.8em; }
