@@ -102,6 +102,21 @@ header {
 }
 
 article{
+  .contents {
+    margin-left: 3.5em;
+    margin-right: 4.5em;
+    border: #333 1px solid;
+    padding-left: 0.8em;
+    .topic-title {
+      font-weight: bold;
+    }
+    ul {
+      margin: 0.1em;
+      li {
+        margin: 0;
+      }
+    }
+  }
   img {
       border: none;
   }
