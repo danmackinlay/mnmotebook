@@ -194,11 +194,8 @@ article {
       article ul li p, article ol li p {
         margin: 0.35em auto; }
   /* line 173, compass/src/main.scss */
-  article dt {
-    font-variant: small-caps; }
-    /* line 175, compass/src/main.scss */
-    article dt:after {
-      content: ':'; }
+  article dt:after {
+    content: ':'; }
   /* line 178, compass/src/main.scss */
   article strong {
     color: #555555;
