@@ -99,7 +99,10 @@ time {
   color: #705050;
   font-size: 70%;
   font-style: italic; }
-
+.rating {
+    font-size: 70%;
+    display: inline-block;
+}
 /* line 76, compass/src/main.scss */
 header {
   padding-bottom: 0; }
