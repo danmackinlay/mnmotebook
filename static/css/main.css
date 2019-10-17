@@ -266,6 +266,8 @@ article {
     display: inline-block;
     margin-left: 0;
     text-indent: 0; }
+  .index #content-list .rating {
+    display: inline;}
 
 /* line 253, compass/src/main.scss */
 footer {

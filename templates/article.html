@@ -29,8 +29,8 @@
       {% endif %}
     </div>
   {% endif %}
-    {% if not HIDE_RATING %}
-    <div class="ratings"></div>
+  {% if not HIDE_RATING %}
+  <div class="ratings">
     <div class="rating usefulness">Usefulness:
       {% for number in range(article.usefulness|default(0)+1) %}
       🔧
@@ -51,8 +51,8 @@
       🚧
       {% endfor %}
     </div>
-    </div>
-    {% endif %}
+  </div>
+  {% endif %}
 </header>
 {% endblock header %}
 

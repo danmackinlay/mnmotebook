@@ -44,6 +44,30 @@
                 {% endif %}
               </div>
               {% endif %}
+              {% if not HIDE_RATING %}
+              <span class="ratings">
+                <span class="rating usefulness">
+                  {% for number in range(article.usefulness|default(0)+1) %}
+                  🔧
+                  {% endfor %}
+                </span>
+                <span class="rating novelty">
+                  {% for number in range(article.novelty|default(0)+1) %}
+                  💡
+                  {% endfor %}
+                </span>
+                <span class="rating uncertainty">
+                  {% for number in range(3-article.certainty|default(0)) %}
+                  🤪
+                  {% endfor %}
+                </span>
+                <span class="rating incompleteness">
+                  {% for number in range(3-article.completeness|default(0)) %}
+                  🚧
+                  {% endfor %}
+                </span>
+              </span>
+              {% endif %}
             </li>
           {% endfor %}
           </ol>
