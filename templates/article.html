@@ -42,12 +42,12 @@
       {% endfor %}
     </div>
     <div class="rating uncertainty">Uncertainty:
-      {% for number in range(3-article.certainty|default(0)) %}
+      {% for number in range(3-(article.certainty|default(0))) %}
       🤪
       {% endfor %}
     </div>
     <div class="rating incompleteness">Incompleteness:
-      {% for number in range(3-article.completeness|default(0)) %}
+      {% for number in range(3-(article.completeness|default(0))) %}
       🚧
       {% endfor %}
     </div>
