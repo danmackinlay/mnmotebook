@@ -29,9 +29,9 @@
             <li>
               <a class="article-link" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
                 <span class="article-title">{{ article.title }}</span>
-                {% if article.rubric is defined %}
-                — <span class="article-rubric">
-                  [&nbsp;{{ article.rubric }}&nbsp;]
+                {% if article.description is defined %}
+                — <span class="article-description">
+                  [&nbsp;{{ article.description }}&nbsp;]
                 </span>
                 {% endif %}
               </a>

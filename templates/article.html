@@ -18,8 +18,8 @@
   <h1>
       <a href="{{ SITEURL }}/{{ article.url }}" id="page-title">{{ article.title }}</a>
   </h1>
-  {% if article.rubric is defined %}
-    <h3 class="article-rubric">{{ article.rubric }} </h3>
+  {% if article.description is defined %}
+    <h3 class="article-description">{{ article.description }} </h3>
   {% endif %}
   {% if not HIDE_DATE %}
     <div class="article-date">
